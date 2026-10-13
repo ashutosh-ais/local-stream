@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Video Stream - Room</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Local Video Stream</h1>
+        <div id="room-info">
+            <p>Room ID: <span id="room-id-display"></span></p>
+            <p>Share this URL with others on your local network:</p>
+            <p id="room-url"></p>
+        </div>
+        <div id="video-container">
+            <video id="video-player" controls autoplay muted playsinline>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="host-controls" class="hidden">
+            <h2>Host Controls</h2>
+            <input type="file" id="video-file-input" accept="video/*">
+            <div id="upload-status"></div>
+            <div id="playback-controls">
+                <button id="play-btn">Play</button>
+                <button id="pause-btn">Pause</button>
+            </div>
+            <div id="participants">
+                <h3>Connected Participants:</h3>
+                <div id="participant-count">0</div>
+            </div>
+        </div>
+        <div id="participant-message" class="hidden">
+            <p>Waiting for the host to start the video...</p>
+        </div>
+        <div id="error-message" class="error hidden"></div>
+    </div>
+    <script src="/client.js"></script>
+</body>
+</html>

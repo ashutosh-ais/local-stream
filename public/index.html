@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Video Stream - Create or Join Room</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Local Video Stream</h1>
+        <div class="tabs">
+            <button class="tab active" id="create-tab">Create Room</button>
+            <button class="tab" id="join-tab">Join Room</button>
+        </div>
+        <div id="create-section" class="section active">
+            <h2>Create a Room</h2>
+            <p>Click the button below to create a new room. Share the room ID with others on your local network.</p>
+            <button id="create-btn">Create Room</button>
+            <div id="create-result" class="result"></div>
+        </div>
+        <div id="join-section" class="section">
+            <h2>Join a Room</h2>
+            <p>Enter the room ID provided by the host.</p>
+            <input type="text" id="room-id-input" placeholder="Room ID" maxlength="6">
+            <button id="join-btn">Join Room</button>
+            <div id="join-result" class="result"></div>
+        </div>
+    </div>
+    <script src="/client.js"></script>
+</body>
+</html>
